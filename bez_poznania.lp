@@ -7,7 +7,7 @@ przychod = 1.2sprzedaz;
 // sprzedaz = suma(i)(sprzedaz(i)) * 300
 sprzedaz = 300sprzedaz_warszawa 300sprzedaz_lodz    300sprzedaz_krakow
            300sprzedaz_katowice 300sprzedaz_wroclaw 300sprzedaz_poznan
-           300sprzedaz_gdansk   300sprzedaz_sczecin 300sprzedaz_lublin
+           300sprzedaz_gdansk   300sprzedaz_szczecin 300sprzedaz_lublin
            300sprzedaz_rzeszow  300sprzedaz_olsztyn 300sprzedaz_zielona_gora;
 			
 // sprzedaz(i) <= suma(j)(transport(j, i))		   
