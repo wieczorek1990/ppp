@@ -1,0 +1,12 @@
+popyt_warszawa=86381.9
+popyt_lodz=20497.4
+popyt_krakow=36000
+popyt_katowice=33674.3
+popyt_wroclaw=26353.8
+popyt_poznan=39530.7
+popyt_gdansk=73205
+popyt_szczecin=20497.4
+popyt_lublin=7320.5
+popyt_rzeszow=7320.5
+popyt_olsztyn=7320.5
+popyt_zielona_gora=20497.4
