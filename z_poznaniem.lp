@@ -469,7 +469,7 @@ koszty_produkcji =  (kjp_warszawa)wielkosc_produkcji_warszawa_warszawa
 					(kjp_gdansk)wielkosc_produkcji_gdansk_lublin
 					(kjp_gdansk)wielkosc_produkcji_gdansk_rzeszow 
 					(kjp_gdansk)wielkosc_produkcji_gdansk_olsztyn 
-					(kjp_gdansk)wielkosc_produkcji_gdansk_zielona_gora;
+					(kjp_gdansk)wielkosc_produkcji_gdansk_zielona_gora
 					(kjp_poznan)wielkosc_produkcji_poznan_warszawa 
 					(kjp_poznan)wielkosc_produkcji_poznan_lodz 
 					(kjp_poznan)wielkosc_produkcji_poznan_krakow
@@ -555,7 +555,7 @@ koszty_transportu = (kt_warszawa_warszawa)transport_warszawa_warszawa
 					(kt_gdansk_lublin)transport_gdansk_lublin
 					(kt_gdansk_rzeszow)transport_gdansk_rzeszow 
 					(kt_gdansk_olsztyn)transport_gdansk_olsztyn 
-					(kt_gdansk_zielona_gora)transport_gdansk_zielona_gora;
+					(kt_gdansk_zielona_gora)transport_gdansk_zielona_gora
 					(kt_poznan_warszawa)transport_poznan_warszawa 
 					(kt_poznan_lodz)transport_poznan_lodz 
 					(kt_poznan_krakow)transport_poznan_krakow
