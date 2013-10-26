@@ -1,0 +1,100 @@
+\documentclass[a4paper]{article}
+\usepackage[polish]{babel}
+\usepackage{polski}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx,color}
+\usepackage{float}
+\usepackage{cite}
+\usepackage{url}
+\usepackage[pdftex,hyperfootnotes=false,pdfborder={0 0 0}]{hyperref}
+\usepackage{indentfirst}
+\usepackage{subfig}
+\usepackage{rotating}
+\frenchspacing
+%zmiana rozmiarów ramki tekstowej
+\addtolength{\hoffset}{-2cm}
+\addtolength{\textheight}{4cm}
+\addtolength{\textwidth}{4cm}
+\addtolength{\voffset}{-2cm}
+%Sprawdzanie pisowni: aspell -t -l pl -c sprawozdanie.tex
+
+\begin{document}
+\input{tytulowa.tex}
+\section{Model matematyczny}
+\[max: przychod - koszty\]
+\[przychod = sprzedaz \cdot 1,2\]
+\[sprzedaz = \sum_{i} sprzedaz_i \cdot 300\]
+\[sprzedaz_i \leq \sum_{j} transport_{ji}\]
+\[sprzedaz_i \leq popyt_i\]
+\[transport_{ji} \geq 1000 \cdot x_{ji}\]
+\[transport_{ji} \leq zdolnosc\_produkcji_j \cdot x_{ji}\]
+\[transport_{ji} \leq wielkosc\_produkcji_{ji}\]
+\[\sum_{i} wielkosc\_produkcji_{ji} \geq 10\% \cdot zdolnosc\_produkcji_j \cdot x_j\]
+\[\sum_{i} wielkosc\_produkcji_{ji} \leq \cdot zdolnosc\_produkcji_j \cdot x_j\]
+\[koszty = (koszty\_transportu + koszty\_produkcji) \cdot 300\]
+\[koszty\_produkcji = \sum_i \sum_j wielkosc\_produkcji_{ji} \cdot koszt\_produkcji_j\]
+\[koszty\_transportu = \sum_i \sum_j transport_{ji} \cdot koszt\_transportu_{ji}\]
+\section{Opis ograniczeń}
+\subsection{\(sprzedaz_i \leq \sum_{j} transport_{ji}\)}
+Sprzedaż na danym rynku jest mniejsza lub równa transportom, które dotarły z wszystkich piekarni.
+\subsection{\(sprzedaz_i \leq popyt_i\)}
+Sprzedaż na danym rynku jest mniejsza lub równa popytowi na tym rynku.
+\subsection{\(transport_{ji} \geq 1000 \cdot x_{ji}\)}
+Wielkość każdego transportu musi być większa od 1000kg, jeżeli on istnieje.
+\subsection{\(transport_{ji} \leq zdolnosc\_produkcji_j \cdot x_{ji}\)}
+Transport jest mniejszy lub równy zdolności produkcji, jeśli została uruchomiona.
+\subsection{\(transport_{ji} \leq wielkosc\_produkcji_{ji}\)}
+Transport jest mniejszy lub równy wielkości produkcji.
+\subsection{\(\sum_{i} wielkosc\_produkcji_{ji} \geq 10\% \cdot zdolnosc\_produkcji_j \cdot x_j\)}
+Produkcja w danej piekarni musi być większa od \(10\%\) zdolności produkcji danej piekarni, jeżeli została uruchomiona.
+\subsection{\(\sum_{i} wielkosc\_produkcji_{ji} \leq \cdot zdolnosc\_produkcji_j \cdot x_j\)}
+Wielkość produkcji danej piekarni jest mniejsza lub równa od zdolności produkcji, jeśli została uruchomiona.
+\section{Wyniki}
+\begin{table}[H]
+\centering
+\begin{tabular}{cccccc}
+Typ\textbackslash Rok & 1 & 2 & 3 & 4 & 5\\
+Bez Poznania & 18771000 & 20451600 & 22091220 & 23636346 & 24452817\\
+Z Poznaniem & 21417000 & 23491200 & 25518000 & 27487200 & 29272350\\
+\end{tabular}
+\caption{NCF}
+\label{tab:ncf}
+\end{table}
+W poniższej tabeli przedstawiono warianty budowy w różnych latach.
+Legenda:
+\begin{itemize}
+\item bez -- w danym roku zakład w Poznaniu nie istnieje,
+\item z -- w danym roku zakład w Poznaniu istnieje,
+\item z-P -- w danym roku zakład w Poznaniu został wybudowany.
+\end{itemize}
+\begin{table}[H]
+\centering
+\begin{tabular}{cccccc}
+1 & 2 & 3 & 4 & 5 & 6\\
+bez & z-P & bez & bez & bez & bez\\
+bez & z   & z-P & bez & bez & bez\\
+bez & z   & z   & z-P & bez & bez\\
+bez & z   & z   & z   & z-P & bez\\
+bez & z   & z   & z   & z   & z-P\\
+\end{tabular}
+\caption{Warianty}
+\label{tab:warianty}
+\end{table}
+\begin{table}[H]
+\centering
+\begin{tabular}{ccccccc}
+Wariant	& 1 & 2 & 3 & 4 & 5 & 6\\
+NPV & 82781394 & 86749245 &	85303245 & 83703593 & 82019828 & 80276848\\
+Okres zwrotu & nd. &	4 & 3 & 3 & 3 & $2^*$\\
+\end{tabular}
+\caption{Wyniki dla wariatnów}
+\label{tab:wyniki}
+\end{table}
+* (dla 6-ciu lat)
+\section{Wnioski}
+Zarekomendowalibyśmy budowę piekarni w Poznaniu w wariantach 2, 3, 4 (rok pierwszy, drugi, trzeci) ze względu na większą wartość NPV niż dla wariantu 1. Inwestycję należy zrealizować w wariancie 2 tj. w pierwszym roku by uzyskać największą wartość NPV. Inwestycję można zrealizować w roku drugim, trzecim lub czwartym by uzyskać najelpszą wartość okresu zwrotu (warianty 3, 4, 5) w analizie 5 letniej. Dla analizy 6-cio letniej najlepszą wartość okresu zwrotu osiąga wariant 6 (budowa w piątym roku). 
+\bibliography{bibliografia}{}
+\bibliographystyle{plain}
+\end{document} 
