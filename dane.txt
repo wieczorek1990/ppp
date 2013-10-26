@@ -12,6 +12,7 @@ zdolnosc_produkcji2_katowice=4500
 zdolnosc_produkcji2_wroclaw=3600
 zdolnosc_produkcji2_gdansk=9100
 zdolnosc_produkcji2_poznan=5500
+
 kjp_warszawa=0.83
 kjp_lodz=0.99
 kjp_krakow=0.94
@@ -19,6 +20,7 @@ kjp_katowice=0.91
 kjp_wroclaw=1.04
 kjp_gdansk=0.89
 kjp_poznan=0.81
+
 kt_warszawa_warszawa=0.06
 kt_warszawa_lodz=0.07
 kt_warszawa_krakow=0.23

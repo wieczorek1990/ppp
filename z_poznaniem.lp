@@ -1,16 +1,16 @@
-// max: przychód - koszty
+// max: przychod - koszty
 max: przychod -koszty;
 
-// przychód = sprzeda¿ * 1,2
+// przychod = sprzedaz * 1,2
 przychod = 1.2sprzedaz;
 
-// sprzeda¿ = suma(i)(sprzeda¿(i)) * 300
+// sprzedaz = suma(i)(sprzedaz(i)) * 300
 sprzedaz = 300sprzedaz_warszawa 300sprzedaz_lodz    300sprzedaz_krakow
            300sprzedaz_katowice 300sprzedaz_wroclaw 300sprzedaz_poznan
            300sprzedaz_gdansk   300sprzedaz_sczecin 300sprzedaz_lublin
            300sprzedaz_rzeszow  300sprzedaz_olsztyn 300sprzedaz_zielona_gora;
 			
-// sprzeda¿(i) <= suma(j)(transport(j, i))		   
+// sprzedaz(i) <= suma(j)(transport(j, i))		   
 sprzedaz_warszawa < transport_warszawa_warszawa transport_lodz_warszawa    transport_krakow_warszawa
                     transport_katowice_warszawa transport_wroclaw_warszawa transport_gdansk_warszawa
 					transport_poznan_warszawa;
@@ -48,7 +48,7 @@ sprzedaz_zielona_gora < transport_warszawa_zielona_gora transport_lodz_zielona_g
 						transport_katowice_zielona_gora transport_wroclaw_zielona_gora transport_gdansk_zielona_gora
 						transport_poznan_zielona_gora;
 
-// sprzeda¿(i) <= popyt(i)
+// sprzedaz(i) <= popyt(i)
 sprzedaz_warszawa < (popyt_warszawa);
 sprzedaz_lodz < (popyt_lodz);
 sprzedaz_krakow < (popyt_krakow);
@@ -148,7 +148,7 @@ transport_poznan_rzeszow > 1000x_poznan_rzeszow;
 transport_poznan_olsztyn > 1000x_poznan_olsztyn;
 transport_poznan_zielona_gora > 1000x_poznan_zielona_gora;
 
-// transport(j, i) <= zdolnoœæ_produkcji(j) * x(j, i);
+// transport(j, i) <= zdolnosc_produkcji(j) * x(j, i);
 transport_warszawa_warszawa < (zdolnosc_produkcji_warszawa)x_warszawa_warszawa;
 transport_warszawa_lodz < (zdolnosc_produkcji_warszawa)x_warszawa_lodz;
 transport_warszawa_krakow < (zdolnosc_produkcji_warszawa)x_warszawa_krakow;
@@ -234,7 +234,7 @@ transport_poznan_rzeszow < (zdolnosc_produkcji_poznan)x_poznan_rzeszow;
 transport_poznan_olsztyn < (zdolnosc_produkcji_poznan)x_poznan_olsztyn;
 transport_poznan_zielona_gora < (zdolnosc_produkcji_poznan)x_poznan_zielona_gora;
 
-// transport(j, i) <= wielkoœæ_produkcji(j, i);
+// transport(j, i) <= wielkosc_produkcji(j, i);
 transport_warszawa_warszawa < wielkosc_produkcji_warszawa_warszawa;
 transport_warszawa_lodz < wielkosc_produkcji_warszawa_lodz;
 transport_warszawa_krakow < wielkosc_produkcji_warszawa_krakow;
@@ -320,7 +320,7 @@ transport_poznan_rzeszow < wielkosc_produkcji_poznan_rzeszow;
 transport_poznan_olsztyn < wielkosc_produkcji_poznan_olsztyn;
 transport_poznan_zielona_gora < wielkosc_produkcji_poznan_zielona_gora;
 
-// suma(i)(wielkoœæ_produkcji(j, i)) >= 10% * zdolnoœæ_produkcji(j) * x(j)
+// suma(i)(wielkosc_produkcji(j, i)) >= 10% * zdolnosc_produkcji(j) * x(j)
 wielkosc_produkcji_warszawa_warszawa wielkosc_produkcji_warszawa_lodz wielkosc_produkcji_warszawa_krakow
 wielkosc_produkcji_warszawa_katowice wielkosc_produkcji_warszawa_wroclaw wielkosc_produkcji_warszawa_poznan
 wielkosc_produkcji_warszawa_gdansk wielkosc_produkcji_warszawa_szczecin wielkosc_produkcji_warszawa_lublin
@@ -357,7 +357,7 @@ wielkosc_produkcji_poznan_gdansk wielkosc_produkcji_poznan_szczecin wielkosc_pro
 wielkosc_produkcji_poznan_rzeszow wielkosc_produkcji_poznan_olsztyn wielkosc_produkcji_poznan_zielona_gora >
 (zdolnosc_produkcji2_poznan)x_poznan;
 
-// suma(i)(wielkoœæ_produkcji(j, i)) <= zdolnoœæ_produkcji(j) * x(j)
+// suma(i)(wielkosc_produkcji(j, i)) <= zdolnosc_produkcji(j) * x(j)
 wielkosc_produkcji_warszawa_warszawa wielkosc_produkcji_warszawa_lodz wielkosc_produkcji_warszawa_krakow
 wielkosc_produkcji_warszawa_katowice wielkosc_produkcji_warszawa_wroclaw wielkosc_produkcji_warszawa_poznan
 wielkosc_produkcji_warszawa_gdansk wielkosc_produkcji_warszawa_szczecin wielkosc_produkcji_warszawa_lublin
@@ -397,7 +397,7 @@ wielkosc_produkcji_poznan_rzeszow wielkosc_produkcji_poznan_olsztyn wielkosc_pro
 // koszty = (koszty_transportu + koszty_produkcji) * 300
 koszty = 300koszty_transportu 300koszty_produkcji;
 
-// koszty_produkcji = suma(i)(suma(j)(wielkoœæ_produkcji(j, i) * koszt_jednostkowy_produkcji(j)))
+// koszty_produkcji = suma(i)(suma(j)(wielkosc_produkcji(j, i) * koszt_jednostkowy_produkcji(j)))
 koszty_produkcji =  (kjp_warszawa)wielkosc_produkcji_warszawa_warszawa
 					(kjp_warszawa)wielkosc_produkcji_warszawa_lodz
 					(kjp_warszawa)wielkosc_produkcji_warszawa_krakow

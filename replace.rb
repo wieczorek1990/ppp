@@ -10,7 +10,11 @@ source = ARGV[1]
 destination = ARGV[2]
 
 text = File.read(source)
+#text.encode!('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '')
 File.open(template, 'r').each_line do |line|
+  if line == "\n"
+    next
+  end
   split = line.split('=')
   var = split[0]
   val = split[1]
