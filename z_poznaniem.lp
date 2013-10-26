@@ -13,40 +13,40 @@ sprzedaz = 300sprzedaz_warszawa 300sprzedaz_lodz    300sprzedaz_krakow
 // sprzedaz(i) <= suma(j)(transport(j, i))		   
 sprzedaz_warszawa < transport_warszawa_warszawa transport_lodz_warszawa    transport_krakow_warszawa
                     transport_katowice_warszawa transport_wroclaw_warszawa transport_gdansk_warszawa
-					transport_poznan_warszawa;
+					          transport_poznan_warszawa;
 sprzedaz_lodz < transport_warszawa_lodz transport_lodz_lodz    transport_krakow_lodz
                 transport_katowice_lodz transport_wroclaw_lodz transport_gdansk_lodz
-				transport_poznan_lodz;
+				        transport_poznan_lodz;
 sprzedaz_krakow < transport_warszawa_krakow transport_lodz_krakow    transport_krakow_krakow
                   transport_katowice_krakow transport_wroclaw_krakow transport_gdansk_krakow
-				  transport_poznan_krakow;
+				          transport_poznan_krakow;
 sprzedaz_katowice < transport_warszawa_katowice transport_lodz_katowice    transport_krakow_katowice
                     transport_katowice_katowice transport_wroclaw_katowice transport_gdansk_katowice
-					transport_poznan_katowice;
+					          transport_poznan_katowice;
 sprzedaz_wroclaw < transport_warszawa_wroclaw transport_lodz_wroclaw    transport_krakow_wroclaw
                    transport_katowice_wroclaw transport_wroclaw_wroclaw transport_gdansk_wroclaw
-				   transport_poznan_wroclaw;
+				           transport_poznan_wroclaw;
 sprzedaz_poznan < transport_warszawa_poznan transport_lodz_poznan    transport_krakow_poznan
                   transport_katowice_poznan transport_wroclaw_poznan transport_gdansk_poznan
-				  transport_poznan_poznan;
+				          transport_poznan_poznan;
 sprzedaz_gdansk < transport_warszawa_gdansk transport_lodz_gdansk    transport_krakow_gdansk
-                    transport_katowice_gdansk transport_wroclaw_gdansk transport_gdansk_gdansk
-					transport_poznan_gdansk;
+                  transport_katowice_gdansk transport_wroclaw_gdansk transport_gdansk_gdansk
+					        transport_poznan_gdansk;
 sprzedaz_szczecin < transport_warszawa_szczecin transport_lodz_szczecin    transport_krakow_szczecin
                     transport_katowice_szczecin transport_wroclaw_szczecin transport_gdansk_szczecin
-					transport_poznan_szczecin;
+					          transport_poznan_szczecin;
 sprzedaz_lublin < transport_warszawa_lublin transport_lodz_lublin    transport_krakow_lublin
                   transport_katowice_lublin transport_wroclaw_lublin transport_gdansk_lublin
-				  transport_poznan_lublin;
+				          transport_poznan_lublin;
 sprzedaz_rzeszow < transport_warszawa_rzeszow transport_lodz_rzeszow    transport_krakow_rzeszow
                    transport_katowice_rzeszow transport_wroclaw_rzeszow transport_gdansk_rzeszow
-				   transport_poznan_rzeszow;
+				           transport_poznan_rzeszow;
 sprzedaz_olsztyn < transport_warszawa_olsztyn transport_lodz_olsztyn    transport_krakow_olsztyn
                    transport_katowice_olsztyn transport_wroclaw_olsztyn transport_gdansk_olsztyn
-				   transport_poznan_olsztyn;
+				           transport_poznan_olsztyn;
 sprzedaz_zielona_gora < transport_warszawa_zielona_gora transport_lodz_zielona_gora    transport_krakow_zielona_gora
-						transport_katowice_zielona_gora transport_wroclaw_zielona_gora transport_gdansk_zielona_gora
-						transport_poznan_zielona_gora;
+						            transport_katowice_zielona_gora transport_wroclaw_zielona_gora transport_gdansk_zielona_gora
+						            transport_poznan_zielona_gora;
 
 // sprzedaz(i) <= popyt(i)
 sprzedaz_warszawa < (popyt_warszawa);
@@ -379,7 +379,7 @@ wielkosc_produkcji_katowice_gdansk wielkosc_produkcji_katowice_szczecin wielkosc
 wielkosc_produkcji_katowice_rzeszow wielkosc_produkcji_katowice_olsztyn wielkosc_produkcji_katowice_zielona_gora <
 (zdolnosc_produkcji_katowice)x_katowice;
 wielkosc_produkcji_wroclaw_warszawa wielkosc_produkcji_wroclaw_lodz wielkosc_produkcji_wroclaw_krakow
-wielkosc_produkcji_wroclaw_katowice wielkosc_produkcji_wroclaw_wroclawwielkosc_produkcji_wroclaw_poznan
+wielkosc_produkcji_wroclaw_katowice wielkosc_produkcji_wroclaw_wroclaw wielkosc_produkcji_wroclaw_poznan
 wielkosc_produkcji_wroclaw_gdansk wielkosc_produkcji_wroclaw_szczecin wielkosc_produkcji_wroclaw_lublin
 wielkosc_produkcji_wroclaw_rzeszow wielkosc_produkcji_wroclaw_olsztyn wielkosc_produkcji_wroclaw_zielona_gora <
 (zdolnosc_produkcji_wroclaw)x_wroclaw;
@@ -389,7 +389,7 @@ wielkosc_produkcji_gdansk_gdansk wielkosc_produkcji_gdansk_szczecin wielkosc_pro
 wielkosc_produkcji_gdansk_rzeszow wielkosc_produkcji_gdansk_olsztyn wielkosc_produkcji_gdansk_zielona_gora <
 (zdolnosc_produkcji_gdansk)x_gdansk;
 wielkosc_produkcji_poznan_warszawa wielkosc_produkcji_poznan_lodz wielkosc_produkcji_poznan_krakow
-wielkosc_produkcji_poznan_katowice wielkosc_produkcji_poznan_wroclawwielkosc_produkcji_poznan_poznan
+wielkosc_produkcji_poznan_katowice wielkosc_produkcji_poznan_wroclaw wielkosc_produkcji_poznan_poznan
 wielkosc_produkcji_poznan_gdansk wielkosc_produkcji_poznan_szczecin wielkosc_produkcji_poznan_lublin
 wielkosc_produkcji_poznan_rzeszow wielkosc_produkcji_poznan_olsztyn wielkosc_produkcji_poznan_zielona_gora <
 (zdolnosc_produkcji_poznan)x_poznan;
