@@ -1,0 +1,16 @@
+max: przychod -koszty;
+przychod = 1.2sprzedaz;
+sprzedaz = 300sprzedaz_warszawa;
+sprzedaz_warszawa < transport_warszawa_warszawa;
+sprzedaz_warszawa < 1000;
+transport_warszawa_warszawa > 100x_warszawa_warszawa;
+transport_warszawa_warszawa < 500x_warszawa_warszawa;
+transport_warszawa_warszawa < wielkosc_produkcji_warszawa_warszawa;
+wielkosc_produkcji_warszawa_warszawa > 100x_warszawa;
+wielkosc_produkcji_warszawa_warszawa < 1000x_warszawa;
+koszty = 300koszty_transportu 300koszty_produkcji;
+koszty_produkcji = 0.8wielkosc_produkcji_warszawa_warszawa;
+koszty_transportu = 0.2transport_warszawa_warszawa;
+x_warszawa_warszawa < 1;
+x_warszawa < 1;
+int x_warszawa_warszawa x_warszawa;
